@@ -9,6 +9,7 @@ font-family: 'Pacifico', cursive;     ===>          */
 /* THIS KEEPS THE NAVBAR FROM OVERLAPPING THE PAGE CONTENT. */
 body { 
     padding-top: 136px;
+    padding-bottom: 50px;
 }
 
 .container-fluid {
@@ -24,7 +25,7 @@ Celebration vector created by freepik - www.freepik.com */
 .home-section,
 .background-style {
     min-height: 100vh;
-    background: #f2f2f2 url("../assets/images/background-images/home-background.jpg") center no-repeat;
+    background: #f2f2f2 url("../assets/images/background-images/home-background.jpg") center repeat;
     background-size: cover;
     position: relative;
 }
@@ -38,6 +39,14 @@ Celebration vector created by freepik - www.freepik.com */
     height: 100%;
     width: 100%;
     background-color: #1b1b1bcc;
+}
+
+.leaderboard-instructions{
+    color: white;
+    font-family: 'Berkshire Swash', cursive;
+}
+.leaderboard-btn{
+    margin-bottom: 95px !important;
 }
 /* ---------------------------------- H1 */
 
@@ -89,39 +98,11 @@ label {
     color: white;
 }
 
-/* Responsive content */
-
-@media(max-width: 1260px) {
-    .button-style {
-        font-size: 22px;
-    }
+div a.a-btn{
+    width: 80%
 }
 
-@media(max-width: 992px) {
-    h1 {
-        font-size: 40px;
-    }
 
-    .button-style {
-        font-size: 14px;
-    }
-}
-
-@media(max-width: 768px) {
-    h1 {
-        font-size: 30px;
-    }
-
-    .button-style {
-        width: auto;
-    }
-}
-
-@media(max-width: 345px) {
-    .button-style {
-        padding: 6px;
-    }
-}
 /*---------------------------------------------------------------------- Header */
 
 /* Logo */
@@ -135,7 +116,9 @@ label {
     font-size: 24px;
     text-align: left;
 }
-
+.main-page-headline{
+    margin-top: 5rem;
+}
 
 /* -------------------------------- Navigation menu */
 .navbar-dark .navbar-nav .nav-link {
@@ -144,11 +127,17 @@ label {
     color: #f2f2f2;
     text-decoration: none;
 }
-.navbar-dark .navbar-nav .nav-link:hover {
-    color: #f2ae2e;
+nav.navbar-gold{
+    background-color: #f2ae2e !important;
+    transition: border 2s;
+    box-shadow: 0 8px 6px -6px black;
 }
+.nav-item:hover{
+    border-bottom: #f2f2f2 2px solid;
+}
+
 .navbar-dark .navbar-nav .nav-link .active-page {
-    color: #f2ae2e;
+    color: #f2f2f2;
 }
 /* Flash Messages */
 h4.flashmsg {
@@ -157,52 +146,18 @@ h4.flashmsg {
     margin: 0 auto;
     font-family: 'Berkshire Swash', cursive;
     font-size: 1.6rem;
-    
 }
 .flashes{
-    background-color: green;
+    background-color: #034f06;
     justify-content: center;
 }
-/* Responsive header */
-
-
-@media(max-width: 1200px) {
-    .navbar-dark .navbar-nav .nav-link {
-        font-size: 14px;
-    }
-}
-
-@media(max-width: 992px) {
-    .navbar-dark .navbar-nav .nav-link {
-        font-size: 12px;
-    }
-
-     body { 
-        padding-top: 102px;
-    }
-    .navbar {
-        padding: 8px;
-    }
-    .logo {
-        margin: 3px 0 3px 3px;
-    }
-    .logo img {
-        height: 70px;
-        width: 70px;
-    }
-    .title {
-        font-size: 18px;
-    }
-}
-
-/* Responsive header */
-
 
 /*---------------------------------------------------------------------- Home-Section */
 
 .home-text {
     text-align: center;
     margin: 0 20px 20px;
+    justify-content: center;
 }
 .home-text p {
     font-family: 'Libre Baskerville', serif;
@@ -211,31 +166,31 @@ h4.flashmsg {
     line-height: 36px;
     letter-spacing: 2px;
 }
+
 #battle_name {
-    margin: 15px;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 40px;
+    width: 100%;
 }
+
+#pin {
+    margin-top: 40px;
+}
+
 #battle-label {
+    width: 100%;
     font-family: 'Berkshire Swash', cursive;
     font-size: 33px;
     color: white;
     box-shadow: 0px 5px 0px #46a637;
 }
 
-.answersList {
-    font-family: theSimpsons;
-    list-style-type: none;
-    font-size: 1.5rem;
-    text-align: center;
-    height: 3rem;
-    line-height: 3rem;
-    margin: 10px auto;
-    width: 75%;
-    border: 2px solid #f05a2b;
-    border-radius: 25px;
-    -webkit-user-select: none;        
-    -moz-user-select: none; 
-    -ms-user-select: none; 
-    user-select: none;
+#league-index {
+    font-family: 'Berkshire Swash', cursive;
+    font-size: 33px;
+    color: white;
+    box-shadow: 0px 5px 0px #46a637;
 }
 
 .center {
@@ -245,22 +200,25 @@ h4.flashmsg {
     margin: 15px;
 }
 
-/* Responsive home-content */
-@media(max-width: 768px) {
-    .home-text {
-        margin: 0;
-    }
-    .home-text p {
-        font-size: 14px;
-        line-height: 20px;
-    }
+.info-page-link{
+    color: #f2ae2e;
 }
+.info-page-link:hover,
+.active{
+    border-bottom: #f2f2f2 2px solid;
+    color: #f2ae2e;
+}
+
+
 /*---------------------------------------------------------------------- Footer */
 footer {
-    background-color: #1b1b1b;
+    background-color: #f2ae2e;
     position: fixed;
     bottom: 0;
-    height: 33px;
+    height: 85px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 .social-links, .social-links ul, .copyright {
     padding: 0;
@@ -272,7 +230,6 @@ footer {
     font-family: 'Berkshire Swash', cursive;
     font-size: 20px;
     line-height: 33px;
-    vertical-align: center;
 }
 .social-links a {
     margin: 0 6px;
@@ -280,15 +237,7 @@ footer {
 .social-links a:hover {
     color: #f2ae2e;
 }
-/* responsive footer */
-@media(max-width: 425px) {
-    .copyright,.social-links a {
-        font-size: 14px;
-    }
-    .social-links a {
-        margin: 0 3px;
-    }    
-}
+
 /*----------------------------------------------------------------------Register - Login */
 .register-section,
 .login-section {
@@ -314,7 +263,388 @@ footer {
     font-size: 22px;
 }
 
-@media(max-width: 375px) {
+/* Leaderboard */
+
+.leaderboard-container{
+    background-color: #f2ae2e;
+    height: 100vh;
+}
+.leaderboard-scores{
+    background-color: #034f06;
+    align-items: center;
+    width: 100%;
+    text-shadow: 2px 2px 2px gold;
+    position: absolute;
+    height: 100vh;
+}
+.leaderboard-heading{
+    margin-top: 0;
+    padding-top: 3rem;
+}
+.scores {
+    color: white;
+}
+ .scores-row{
+    background-color: #034f06;    
+}
+#hr_leaderboard {
+    width: 50%;
+    background-color: gold;
+}
+.scoreboard {
+    font-family: 'Berkshire Swash', cursive;;
+    background: rgb(248, 247, 177);
+    margin: 20px 20px 20px 0px;
+    border: 2px solid goldenrod;
+    border-radius: 25px;
+    box-shadow: 5px 5px 5px gold;
+    text-align: center;
+}
+.leaderboard-title {
+    border: 6px outset #8c512e;
+    background: #c68f25;
+}
+.place {
+    font-family: 'Berkshire Swash', cursive;
+    margin: 40px 20px 40px 10px;
+    font-size: 2rem;
+    border-radius: 25px;
+    color: white;
+    text-align: center;
+}
+.score-text {
+    margin: 10px;
+    text-align: left;
+    color: black;
+    font-size: 2rem;
+}
+.scores {
+    margin: auto;
+    width: 75%;
+    margin-bottom: 100px;
+    background: #034f06;
+}
+
+.gold {
+    border: 3px solid rgb(177, 177, 177);
+    background: gold;
+    box-shadow: 10px 10px 10px gold;
+}
+
+.silver {
+    border: 3px solid rgb(177, 177, 177);
+    background: silver;
+    box-shadow: 10px 10px 10px silver;
+}
+
+.bronze {
+    border: 3px solid rgb(177, 177, 177);
+    background: #CD7F32;
+    box-shadow: 10px 10px 10px #CD7F32;
+}
+
+.right {
+    text-align: right;
+}
+
+#hr_scores {
+    margin: 50px auto 50px auto;
+    background-color: gold;
+    width: 75%;
+}
+
+/*----------------------------------------------------------------------Battleground */
+
+.battle-modal {
+    color: #f2f2f2;
+    font-family: 'Berkshire Swash', cursive;
+    background: #46a637;
+    border: 6px outset #8c512e;
+}
+
+.modal-header h1 {
+    font-size: 2.5rem;
+    margin-bottom: 5px;
+}
+.modal-header h2 {
+    font-size: 1.5rem;
+}
+
+.info-row {
+    color: white;
+    font-family: 'Berkshire Swash', cursive;
+}
+
+.stats {
+    text-align: center;
+    margin: 0;
+    font-size: 3rem;
+}
+
+.stats p {
+    margin: 10px;
+}
+
+#timer {
+    margin-left: 10px;
+}
+
+.answersList {
+    background: gold;
+    font-family: 'Berkshire Swash', cursive;
+    list-style-type: none;
+    color:#343a40;
+    font-size: 1.5rem;
+    text-align: center;
+    height: 3rem;
+    line-height: 3rem;
+    margin: 10px auto;
+    width: 50%;
+    border: 2px solid #f05a2b;
+    border-radius: 25px;
+    -webkit-user-select: none;        
+    -moz-user-select: none; 
+    -ms-user-select: none; 
+    user-select: none;
+    margin-bottom: 40px;
+}
+.answersList:hover {
+    box-shadow: 0px 0px 20px gold;
+}
+#questionText {
+    text-align: center;
+    font-family: 'Berkshire Swash', cursive;
+    color: white;
+    margin-top: 20px;
+
+}
+.game-row {
+    background:#e7b556;
+    margin-right: 20%;
+    margin-left: 20%;
+    border: 3px solid black;
+    box-shadow: 0px 0px 20px gold;
+}
+.result {
+    margin: 10px;
+    font-size: 2rem;
+}
+.hidden-score-input{
+    display: none;
+}
+
+/*---------------------------------------------------------------- info pages*/
+
+/* Image Source: https://traveler.marriott.com/tips-and-trends/go-green-at-the-best-st-patricks-day-celebrations-and-thats-no-blarney/
+   https://www.hillwalktours.com/walking-hiking-blog/story-of-st-patrick/
+*/
+
+.info-section{
+    min-height: 100vh;
+    background: #f2f2f2 url("../assets/images/background-images/home-background.jpg") center no-repeat;
+    background-size: cover;
+    position: relative;
+}
+
+.info-section::before{
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    background-color: #1b1b1bcc;
+}
+
+.info-text {
+    text-align: center;
+    margin: 0 20px 20px;
+}
+.info-text p, h3 {
+    font-family: 'Libre Baskerville', serif;
+    color: #f2f2f2;
+    font-size: 1rem;
+    line-height: 36px;
+    letter-spacing: 2px;
+}
+
+.info_p {
+    text-align: justify;
+}
+
+.info_title {
+    text-align: left;
+    font-weight: bold;
+    font-size: 1.5rem;
+    color: goldenrod;
+    text-shadow: 1px 1px 1px white;
+}
+
+.right-title {
+    text-align: right;
+}
+
+.center_title {
+    text-align: center;
+}
+
+.left-title {
+    text-align: left;
+}
+.info_title_world {
+    font-weight: bold;
+    font-size: 1.5rem;
+    color: goldenrod;
+    text-shadow: 1px 1px 1px white;
+    text-decoration: underline;
+    margin: 30px 0;
+    font-size: 2rem;
+}
+.info-img{
+    object-fit: cover;
+}
+.right-img{
+    width: 40%;
+    height: 10%;
+    float: right;
+    border-radius: 15%;
+    padding-left:15px;
+}
+.left-img{
+    width: 40%;
+    height: 10%;
+    float: left;
+    border-radius: 15%;
+    padding-right:15px;
+}
+/* Media Queries */
+
+@media(max-width: 1260px) {
+    .button-style {
+        font-size: 22px;
+    }
+    .navbar-dark .navbar-nav .nav-link {
+        font-size: 14px;
+    }
+}
+
+@media(max-width: 992px) {
+    h1 {
+        font-size: 40px;
+    }
+
+    .button-style {
+        font-size: 14px;
+    }
+    .navbar-dark .navbar-nav .nav-link {
+        font-size: 12px;
+    }
+
+     body { 
+        padding-top: 102px;
+    }
+    .navbar {
+        padding: 8px;
+    }
+    .logo {
+        margin: 3px 0 3px 3px;
+    }
+    .logo img {
+        height: 70px;
+        width: 70px;
+    }
+    .title {
+        font-size: 18px;
+    }
+}
+
+@media(max-width: 768px) {
+    .info-text {
+        margin: 0;
+    }
+    .info-text p {
+        font-size: 14px;
+        line-height: 20px;
+    }
+    .home-text {
+        margin: 0;
+        justify-content: center;
+    }
+    .home-text p {
+        font-size: 14px;
+        line-height: 20px;
+    }
+    h1 {
+        font-size: 30px;
+    }
+    .button-style {
+        width: auto;
+    }
+    .score-text{
+        font-size: 0.95rem;
+    }
+    .scores{
+        width: 95%;
+    }
+    .gold{
+        width: 100px;
+    }
+    .info-row {
+        padding-top: 10px;
+    }
+    .modal-header h1 {
+        font-size: 2rem;
+        margin-bottom: 5px;
+    }
+    .modal-header h2 {
+        font-size: 1rem;
+    }    
+    .answersList {
+        font-size: 1.5rem;
+        width: 95%;
+    }
+}
+
+@media(max-width: 425px) {
+    .copyright,.social-links a {
+        font-size: 14px;
+    }
+    .social-links a {
+        margin: 0 3px;
+    }
+    .question ul {
+        margin: 0;
+        padding: 0;
+    }    
+    .answersList {
+        font-size: 1rem;
+        width: 95%;
+    }
+    #questionText {
+        font-size: 1.5rem;
+    }
+    .stats p {
+        font-size: 2rem;
+    }
+    .modal-header h1 {
+        font-size: 2rem;
+        margin-bottom: 5px;
+    }
+    .modal-header h2 {
+        font-size: 1rem;
+    }
+    .modal-score {
+        font-size: 1.5rem;
+    }
+    .info-row {
+        margin-top: 0;
+    }
+}
+
+@media(max-width: 345px) {
+    .button-style {
+        padding: 6px;
+    }
     .register-section h1 {
         font-size: 33px;
     }
@@ -322,3 +652,5 @@ footer {
         font-size: 18px;
     }
 }
+
+
